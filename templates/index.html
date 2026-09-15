@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Triagem e Agendamento - Escuta Psicológica Comunitária</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
 
+    <header>
+        <h1>Acolhimento e Escuta Psicológica Comunitária</h1>
+        <p>Serviço de triagem e agendamento para acolhimento psicológico acessível</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Sobre a Ação de Extensão</h2>
+            <p>
+                Este sistema visa facilitar o acesso a cuidados em saúde mental e acolhimento psicológico 
+                para a comunidade. Preencha o formulário abaixo para solicitar um agendamento de triagem.
+            </p>
+        </section>
+
+        <section class="form-container">
+            <h2>Solicitação de Agendamento</h2>
+            <form action="/" method="POST">
+                
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail de Contato:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="telefone">Telefone / WhatsApp:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(79) 99999-9999" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="turno">Turno de Preferência:</label>
+                    <select id="turno" name="turno" required>
+                        <option value="" disabled selected>Selecione um turno</option>
+                        <option value="Manhã">Manhã</option>
+                        <option value="Tarde">Tarde</option>
+                        <option value="Noite">Noite</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mensagem">Breve relato sobre o motivo da busca por acolhimento (opcional):</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Descreva brevemente como podemos ajudar..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Solicitação</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Projeto Integrador II - UFMS Digital | Ação de Extensão em Saúde Mental</p>
+    </footer>
+
+</body>
+</html>
